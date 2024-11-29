@@ -4,11 +4,9 @@ const parent = React.createElement(
     React.createElement(
         "div",
         {id: "child"},
-        React.createElement(
-            "h1",
-            {id: "heading"},
-            "I am a heading from react div which is nested"
-        )
+        [React.createElement("h1",{id: "heading"},"I am a h1"),
+        React.createElement("h2",{id: "heading"},"I am a h2"),
+        React.createElement("h3",{id: "heading"},"I am a h3")]
     )
 )
 
