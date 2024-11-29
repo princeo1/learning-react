@@ -6,7 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="root"></div>
+    <div>I am above root, I don't have React in me</div>
+    <div id="root">
+        <h5>I am h5 but I will be replaced because React takes control of my parent div with id root
+            You can refresh the browser to see my content.
+            [Note]: I will be replaced by react not appended
+        </h5>
+    </div>
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="./App.js">
