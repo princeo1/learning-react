@@ -1,3 +1,20 @@
+const parent = React.createElement(
+    "div",
+    {id: "parent"},
+    React.createElement(
+        "div",
+        {id: "child"},
+        React.createElement(
+            "h1",
+            {id: "heading"},
+            "I am a heading from react div which is nested"
+        )
+    )
+)
+
+
+
+
 const heading = React.createElement(
     'h1',
     {
@@ -8,4 +25,4 @@ const heading = React.createElement(
 );
      // we are creating a heading h1 tag using core of react
 const root = ReactDOM.createRoot(document.getElementById('root')); // we are creating a root which will be rendered in browsers using React DOM
-root.render(heading); // we are telling react to render the created root
+root.render(parent); // we are telling react to render the created root
