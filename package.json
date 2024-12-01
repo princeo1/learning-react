@@ -89,6 +89,9 @@
     "utility-types": "^3.11.0",
     "weak-lru-cache": "^1.2.2"
   },
+  "browsersList": [
+    "last 2 versions"
+  ],
   "scripts": {
     "test": "jest"
   },
