@@ -37,7 +37,24 @@ import ReactDOM from 'react-dom/client';
      // we are creating a heading h1 tag using core of react
 
  // JSX syntax
+// This is React Element
+const jsxHeading = (<h1 id="jsxHeading">
+        I am heading from JSXwa
+    </h1>)
 
-const jsxHeading = <h1 id="jsxHeading">I am heading from JSX</h1>
+// This is React Functional Component
+
+const HeadingComponent1 = () => {
+    return <h1 id="jsxHeading">I am HeadingComponent1</h1>
+}
+
+const HeadingComponent2 = () => {
+        <div>
+            <HeadingComponent1/>
+            <h1> I am Heading Component 2</h1>
+        </div>
+    } 
+
+
 const root = ReactDOM.createRoot(document.getElementById('root')); // we are creating a root which will be rendered in browsers using React DOM
-root.render(jsxHeading); // we are telling react to render the created root
+root.render(<HeadingComponent2/>); // we are telling react to render the created root
