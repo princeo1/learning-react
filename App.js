@@ -39,7 +39,7 @@ import ReactDOM from 'react-dom/client';
  // JSX syntax
 // This is React Element
 const jsxHeading = (<h1 id="jsxHeading">
-        I am heading from JSXwa
+        I am heading from JSX
     </h1>)
 
 // This is React Functional Component
