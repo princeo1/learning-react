@@ -36,25 +36,48 @@ import ReactDOM from 'react-dom/client';
 // );
      // we are creating a heading h1 tag using core of react
 
- // JSX syntax
-// This is React Element
-const jsxHeading = (<h1 id="jsxHeading">
-        I am heading from JSX
-    </h1>)
+ // This is an object
+const elementWithCoreReact = React.createElement('h1', {id:"coreReact"}, 'I am h1 made from core react');
+console.log(elementWithCoreReact);
+console.log(elementWithCoreReact);
 
-// This is React Functional Component
+// This is creating react element using JSX
+const elem = <div>I am a div with JSX</div>;
+console.log(elem);
 
-const HeadingComponent1 = () => {
-    return <h1 id="jsxHeading">I am HeadingComponent1</h1>
-}
-
-const HeadingComponent2 = () => {
-        <div>
-            <HeadingComponent1/>
-            <h1> I am Heading Component 2</h1>
+// This is creating react element using JSX
+const elemWithMultipleLines = (
+    <div className="parent">
+        <div className='child'>
+            <h1>I am a multiliner h1 with parent inside me</h1>
         </div>
-    } 
+    </div>
+);
+console.log(elemWithMultipleLines);
+// Creating a react functional component 
+// This is a function which returns JSX
 
+const ChotuReactComponent = function () {
+    return (
+        <div className="chotu">
+            <h3>I am chotu React Component</h3>
+        </div>
+    )
+}
+console.log(ChotuReactComponent);
+const ReactComponent = () =>  
+    (
+        <div className="parent">
+            <div className='child'>
+                <h1>I am a React functional component</h1>
+                <h2>I am a multiliner h1 with parent inside me</h2>
+                <ChotuReactComponent/>
+                {<ChotuReactComponent/>}
+            </div>
+        </div>
+    )
 
-const root = ReactDOM.createRoot(document.getElementById('root')); // we are creating a root which will be rendered in browsers using React DOM
-root.render(<HeadingComponent2/>); // we are telling react to render the created root
+console.log(ReactComponent);
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(ReactComponent());
